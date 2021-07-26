@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <title>SpringBoot + Freemarker</title>
     <link rel="shortcut icon" href="/static/favicon.ico"/>
@@ -10,7 +9,7 @@
 <body>
 <div id="mainContent">
     <h1>Hello boy,</h1><br>
-    <p id="message" style="cursor: pointer">{{message}}</p>
+    <p id="message" @click="loadMessages" style="cursor: pointer">{{message}}</p>
 </div>
 <script>
     const mainContent = new Vue({
@@ -19,7 +18,7 @@
             message: 'welcome to index page !'
         },
         mounted() {
-            this.loadMessages();
+            // this.loadMessages();
         },
         methods: {
             loadMessages: function () {
@@ -42,20 +41,20 @@
         })
     }
 
-    $("#message").click(function () {
-        $.ajax({
-            url: "/message",
-            data: {
-                userName: 'jiaxiansun',
-                password: '654321'
-            },
-            type: 'GET',
-            success: function (res) {
-                console.log(res)
-                $("#message").text(res)
-            }
-        })
-    })
+    // $("#message").click(function () {
+    //     $.ajax({
+    //         url: "/message",
+    //         data: {
+    //             userName: 'jiaxiansun',
+    //             password: '654321'
+    //         },
+    //         type: 'GET',
+    //         success: function (res) {
+    //             console.log(res)
+    //             $("#message").text(res)
+    //         }
+    //     })
+    // })
 </script>
 </body>
 </html>
