@@ -16,13 +16,13 @@
     const mainContent = new Vue({
         el: "#mainContent",
         data: {
-            message: ''
+            message: 'welcome to index page !'
         },
         mounted() {
-            this.loadLogs();
+            this.loadMessages();
         },
         methods: {
-            loadLogs: function () {
+            loadMessages: function () {
                 getMessage();
             }
         }
@@ -30,7 +30,7 @@
 
     function getMessage() {
         $.ajax({
-            url: "/ajax/test",
+            url: "/message",
             data: {
                 userName: 'jiaxiansun',
                 password: '654321'
@@ -44,7 +44,7 @@
 
     $("#message").click(function () {
         $.ajax({
-            url: "http://visit.api.dongao.com/bdc/checkLogin",
+            url: "/message",
             data: {
                 userName: 'jiaxiansun',
                 password: '654321'
