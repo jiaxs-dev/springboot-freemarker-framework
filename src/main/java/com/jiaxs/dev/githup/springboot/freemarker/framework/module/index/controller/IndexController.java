@@ -22,6 +22,11 @@ public class IndexController {
         return "index";
     }
 
+    @RequestMapping("/login")
+    public String login(Model model, HttpServletRequest httpServletRequest){
+        return "login";
+    }
+
     @RequestMapping("/message")
     @ResponseBody
     public Object getMessage(HttpServletRequest httpServletRequest){
