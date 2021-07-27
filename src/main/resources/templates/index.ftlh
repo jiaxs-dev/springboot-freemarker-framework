@@ -31,12 +31,14 @@
     <a-tooltip placement="left" title="Prompt Text" :get-popup-container="getPopupContainer">
         <a-button>Adjust automatically / 自动调整</a-button>
     </a-tooltip>
+    <a-progress type="circle" :percent="75" />
 </div>
 <script>
     const mainContent = new Vue({
         el: "#mainContent",
         data: {
-            message: 'welcome to index page !'
+            message: 'welcome to index page !',
+            spinning: false
         },
         mounted() {
             // this.loadMessages();
